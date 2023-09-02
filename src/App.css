@@ -10,9 +10,13 @@ body{
 }
 
 .Sidebar{
-  height: 100%;
   width: 250px;
+  height: 93%;
+  margin-top: 80px;
+  position: fixed;
+  border-radius: 0% 5% 0% 0%;
   background-color: #2f4050;
+  
 }
 
 .Sidebarlist{
@@ -50,6 +54,39 @@ body{
 }
 
 .Sidebarlist #active{
-  background-color:#293846 ;
+  background-color:#010203 ;
+}
+
+.Header{
+  height: 80px;
+  background-color: #CFE2ED;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  margin: 0%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0, 0, 0.15);
+}
+
+.Header .logo{
+  
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0%;
+  justify-content: space-evenly;
+}
+.Header .userDisplay{
+  
+  
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.Header .userDisplay .userDetails{
+  align-items: center;
+  
+  line-height: 1.2%;
 }
 

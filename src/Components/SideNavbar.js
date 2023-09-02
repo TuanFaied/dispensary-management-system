@@ -11,7 +11,7 @@ function SideNavbar() {
                     <li
                         key={key}
                         className='row'
-                        id = {window.location.pathname === val.link ? "active" : ""}
+                        id = {window.location.pathname === val.link ? "active" : " "}
                         onClick={() => {
                             window.location.pathname = val.link ;
                         }}
@@ -19,6 +19,7 @@ function SideNavbar() {
                         <div id="icon">{val.icon}</div> <div id="title">{val.title}</div>
 
                     </li>
+                    
 
                 );
             }
