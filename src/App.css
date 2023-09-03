@@ -97,3 +97,12 @@ body{
   margin-left: 50px;
   position: fixed;
 }
+.SideMenuAndPageContent{
+  display: flex;
+  flex: 1;
+  
+}
+.PageContex{
+  margin-top: 85px;
+  margin-left: 260px;
+}
