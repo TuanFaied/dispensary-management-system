@@ -22,7 +22,7 @@ function SideNavbar() {
                         
                         key={key}
                         className='row'
-                        id = {window.location.pathname === val.link ? 'active' :''}
+                        id = {window.location.pathname === val.link ? 'active' :'error'}
                         onClick={() => {
                             window.location.pathname = val.link ;
                             navigate(val.link);

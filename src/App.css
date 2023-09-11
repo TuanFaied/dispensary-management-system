@@ -106,3 +106,71 @@ body{
   margin-top: 85px;
   margin-left: 260px;
 }
+.progress-space{
+  margin-bottom: -8px;;
+}
+progress{
+  padding: -28px;
+}
+
+.status-box {
+  width: 100px;
+  height: 30px;
+  color: hsl(0, 0%, 98%);
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+}
+
+.open {
+  background-color: green;
+}
+
+.close {
+  background-color: red;
+}
+.status-dropdown {
+  position: absolute;
+  top: 120px; /* Adjust the top value to position it vertically */
+  right: 240px; /* Adjust the right value to position it horizontally */
+  z-index: 999; /* Ensure it's above other content if necessary */
+  transform: translateX(100%); /* Move it to the right edge of the parent container */
+}
+.calendar{
+  position: absolute;
+  top: 220px; /* Adjust the top value to position it vertically */
+  right: 340px; /* Adjust the right value to position it horizontally */
+  z-index: 999; /* Ensure it's above other content if necessary */
+  transform: translateX(100%); 
+}
+/* DispensaryStatusDropdown.css */
+/* Add styles for the select box */
+select {
+  width: 100px; /* Set the width as needed */
+  height: 30px; /* Set the height as needed */
+  font-size: 14px; /* Set the font size as needed */
+  padding: 5px; /* Add padding to adjust the text position */
+  border: 1px solid #ccc; /* Add a border for better visibility */
+  border-radius: 5px; /* Round the corners */
+  background-color: #fff; /* Background color for the select box */
+  color: #333; /* Text color */
+}
+
+/* Style for the dropdown arrow icon (optional) */
+select::-ms-expand {
+  display: none; /* Hide the default dropdown arrow in IE */
+}
+
+/* Style the option elements (optional) */
+select option {
+  background-color: #fff; /* Background color for options */
+  color: #333; /* Text color for options */
+  padding: 5px; /* Add padding for better spacing */
+}
+
+/* Add hover and focus styles (optional) */
+select:hover,
+select:focus {
+  border: 1px solid #007bff; /* Change border color on hover/focus */
+  outline: none; /* Remove the outline */
+}
