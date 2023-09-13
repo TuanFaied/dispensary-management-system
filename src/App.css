@@ -1,6 +1,42 @@
 .App {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #EFEFEF;
+}
+.Header{
+  height: 80px;
+  
+  display: flex;
+  margin: 0%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0, 0, 0.15);
+  background-color: hsl(202, 61%, 36%);
+  position: sticky;
+  top: 0;
+
+}
+.SideMenuPageContent{
+  display: flex;
+  flex: 1;
+  justify-content: start;
+  align-items: start;
+
+}
+.SideMenu{
+  height: 100%;
+
+}
+
+.PageContent{
+  padding: 12px;
+
+}
+.seatbox{
+  
+  width: 500px;
   background-color: #EFEFEF;
 }
 
@@ -15,7 +51,7 @@ body{
   margin-top: 130px;
   position: fixed;
   border-radius: 0% 5% 0% 0%;
-  background-color: #C9E6F5;
+  background-color: hsl(206, 28%, 95%);
   
 }
 
@@ -58,17 +94,7 @@ body{
   border-left: 2px solid #11a2d7;
 }
 
-.Header{
-  height: 80px;
-  background-color: #CFE2ED;
-  position: fixed;
-  width: 100%;
-  display: flex;
-  margin: 0%;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(0,0, 0, 0.15);
-}
+
 
 .Header .logo{
   
@@ -97,15 +123,8 @@ body{
   margin-left: 50px;
   position: fixed;
 }
-.SideMenuAndPageContent{
-  display: flex;
-  flex: 1;
-  
-}
-.PageContex{
-  margin-top: 85px;
-  margin-left: 260px;
-}
+
+
 .progress-space{
   margin-bottom: -8px;;
 }
@@ -173,4 +192,53 @@ select:hover,
 select:focus {
   border: 1px solid #007bff; /* Change border color on hover/focus */
   outline: none; /* Remove the outline */
+}
+/* BookedPatientsCard.css */
+
+
+.indicator {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: green; /* Green circular indicator */
+  margin-right: 0px; /* Adjust margin as needed */
+}
+.indicator2 {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: orange; /* Green circular indicator */
+  margin-right: 0px; /* Adjust margin as needed */
+}
+.indicator3 {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: red; /* Green circular indicator */
+  margin-right: 0px; /* Adjust margin as needed */
+}
+
+/* You can add more styles as needed */
+
+/* NumberBox.css */
+.number-box {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* NumberCarousel.css */
+.number-carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.number-row {
+  display: flex;
 }
