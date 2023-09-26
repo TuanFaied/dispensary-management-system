@@ -1,11 +1,11 @@
 import React from 'react'
 import { Routes,Route } from 'react-router-dom'
-import Dashboard from '../PagesContent/Admin/Dashboard'
-import PatientDetail from '../PagesContent/Admin/PatientDetail'
-import POS from '../PagesContent/Admin/POS'
-import Schedule from '../PagesContent/Admin/Schedule'
-import Settings from '../PagesContent/Admin/Settings'
-import Stocks from '../PagesContent/Admin/Stocks'
+import Dashboard from '../PagesContent/Admin/Dashboard/Dashboard'
+import PatientDetail from '../PagesContent/Admin/PatientsDetails/PatientDetail'
+import POS from '../PagesContent/Admin/POS/POS'
+import Schedule from '../PagesContent/Admin/Schedule/Schedule'
+import Settings from '../PagesContent/Admin/Settings/Settings'
+import Stocks from '../PagesContent/Admin/Stocks/Stocks'
 
 function AppRoutes() {
   return (

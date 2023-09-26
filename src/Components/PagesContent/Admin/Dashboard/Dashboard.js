@@ -1,7 +1,7 @@
 import { Calendar,theme, Card, Progress, Space, Statistic, Typography } from 'antd'
 import React from 'react'
 import GroupsIcon from '@mui/icons-material/Groups';
-import '../../../../src/App.css';
+
 
 import DispensaryStatusDropdown from './DispensaryStatusDropdown';
 
@@ -17,7 +17,7 @@ function Dashboard() {
   return (
     <div>
       
-        <Typography.Title level = {5.4}> Dashboard</Typography.Title>
+        <Typography.Title level = {4}> Dashboard</Typography.Title>
         <Typography.Text style={{fontSize:"20px"}} >Welcome Back,</Typography.Text>
         <div>
           <DispensaryStatusDropdown />

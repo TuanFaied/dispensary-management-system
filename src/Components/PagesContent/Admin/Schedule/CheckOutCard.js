@@ -1,7 +1,7 @@
 import React from 'react';
 import {Space, Typography } from 'antd';
  // Import your custom CSS for styling
-import '../../../App.css';
+
 
 const CheckOutCard = ({ checkOutCount }) => {
   return (

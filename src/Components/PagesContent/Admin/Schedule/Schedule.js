@@ -5,7 +5,7 @@ import BookedPatientsCard from './BookedPatientsCard';
 import PatientWaitingCard from './PatientWaitingCard';
 import CheckOutCard from './CheckOutCard';
 import NumberCarousel from './NumberCarousel';
-import '../../../../src/App.css';
+
 import { Button } from '@mui/material';
 import BookedSeatStatus from './BookedSeatStatus';
 
@@ -16,7 +16,7 @@ function Schedule() {
   return (
     <div>
     
-      <Typography.Title level = {5.4}> Schedule</Typography.Title>
+      <Typography.Title level = {4}> Schedule</Typography.Title>
       <div>
       <Typography.Title >Reserve your seat</Typography.Title>
       <Space direction="horizontal">

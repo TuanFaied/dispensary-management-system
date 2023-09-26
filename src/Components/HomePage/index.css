@@ -1,0 +1,29 @@
+.front{
+    content: '';
+    background: url('../../Images/front.png') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+
+    
+}
+
+.h1{
+    padding: 100px 10px 10px 10px;
+    text-align: center;
+    color: aliceblue;
+}
+.h1 .blue{
+    color: #1d92bc;
+}
+.h2{
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    color: aliceblue;
+}
+.h2 .blue{
+    color: #1d92bc;
+}
+.buttonSL{
+    display: flex;
+    justify-content: center;   
+}

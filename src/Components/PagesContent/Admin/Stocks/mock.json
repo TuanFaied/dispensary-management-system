@@ -1,0 +1,16 @@
+[
+    {
+      "id": 1,
+      "name": "Panadol",
+      "expireDate": "30 Sep 2023",
+      "quantity": "50",
+      "unitPrice": "5"
+    },
+    {
+      "id": 2,
+      "name": "Vitamin C",
+      "expireDate": "05 Oct 2023",
+      "quantity": "80",
+      "unitPrice": "3"
+    }
+  ]

@@ -16,7 +16,9 @@ function SideNavbar() {
     const navigate = useNavigate();
   return (
 
-    <Menu onClick={(item) =>{
+    <Menu 
+    
+    onClick={(item) =>{
         navigate(item.key);
 
         }}
@@ -55,54 +57,8 @@ function SideNavbar() {
     ]}>
 
     </Menu>
-   /*  <div className='SideMenu'>
-        <img style={{
-
-            width:"150px",
-            height:"150px",
-            borderRadius:"50%",
-            objectFit:"cover",
-            position: "absolute",
-            top: "-120px", 
-            right: "200px",
-           
-            transform: "translateX(100%)"
-
-
-                }
-                }
-                className='profile1'
-                src={profile} alt='' />
-
-        <h2 style={ {
-            textAlign:'center',
-            marginTop:"140px"
-            } } >Good Morning</h2>
-        <p style={ {textAlign:'center', fontSize:"20px"} }>Faied ahamadh</p>
-        <ul className='Sidebarlist'>
-            {SidebarData.map((val, key) =>{
-                return (
-                    <li
-                        
-                        key={key}
-                        className='row'
-                        id = {window.location.pathname === val.link ? 'active' :'error'}
-                        onClick={() => {
-                            window.location.pathname = val.link ;
-                            navigate(val.link);
-                        }}
-                    >
-                        <div id="icon">{val.icon}</div> <div id="title">{val.title}</div>
-
-                    </li>
-
-
-                );
-            }
-            )}
-
-        </ul>
-    </div> */
+  
+    
   )
 }
 
