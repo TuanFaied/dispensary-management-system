@@ -1,8 +1,9 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import SettingsIcon from '@mui/icons-material/Settings';
-import { Home } from '@mui/icons-material/Home';
-
+import  Home   from '@mui/icons-material/Home';
+import  History  from '@mui/icons-material/History';
+import { Menu } from 'antd'
 function UserSideNavBar() {
     const navigete =useNavigate();
   return (
@@ -14,10 +15,10 @@ function UserSideNavBar() {
             {
                 icon : <Home/>,
                 label:"Home",
-                key:'/Dashboard'   
+                key:'/Home'   
             },
             {
-                icon : <DashboardIcon/>,
+                icon : <History/>,
                 label:"MedicalHistory",
                 key:'/MedicalHistory'   
             },
