@@ -1,9 +1,9 @@
 import React from 'react'
-import '../App.css'
+import '../../../App.css'
 import {SidebarData} from './SidebarData'
 import { useNavigate } from 'react-router-dom'
-import profile from '../Images/1.png'
-import { Menu, Space } from 'antd'
+
+import { Menu } from 'antd'
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import PointOfSaleIcon from '@mui/icons-material/PointOfSale';

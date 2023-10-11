@@ -19,7 +19,6 @@ function  Header() {
             src={profile} alt='' />
             <div className='userDetails' >
                 <h3>Faied Ahamadh</h3>
-                <p>tuanfaied8@gmail.com</p>
             </div>
             <KeyboardArrowDownIcon/>
         </div>
