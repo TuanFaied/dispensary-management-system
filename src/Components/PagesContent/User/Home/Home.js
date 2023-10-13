@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Home() {
+
   return (
-    <div>Home</div>
+   <> <div>Home</div>
+      <h1>Seat Reservation</h1>
+      
+      </>  
   )
 }
 

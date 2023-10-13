@@ -7,6 +7,7 @@
 }
 .Header{
   height: 80px;
+  width: 100%;
   display: flex;
   margin: 0%;
   justify-content: space-between;

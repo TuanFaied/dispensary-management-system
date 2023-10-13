@@ -20,22 +20,22 @@ function Schedule() {
       <div>
       <Typography.Title >Reserve your seat</Typography.Title>
       <Space direction="horizontal">
-        <Card >
+        <Card size="small" >
           <Space direction="horizontal" >
           <BookedPatientsCard bookedPatientCount={bookedPatientCount} />
           </Space>
         </Card>
-        <Card>
+        <Card size="small" >
           <PatientWaitingCard waitingPatientCount={waitingPatientCount} />
         </Card>
-        <Card>
+        <Card size="small" >
           <CheckOutCard checkOutCount={checkOutCount} />
         </Card>
       </Space>
       
       </div>
       <div className="seatbox">
-      <h1>Number Carousel</h1>
+      
       <NumberCarousel />
       </div>
       <Space>

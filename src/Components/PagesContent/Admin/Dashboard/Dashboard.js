@@ -24,7 +24,7 @@ function Dashboard() {
         </div>
        <div>
           <Space direction="vertical">
-          <Card>
+          <Card size="small" >
           <Space direction="horizontal">
             <GroupsIcon 
               style={{

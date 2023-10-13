@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../Images/logo.png'
 import profile from '../Images/1.png'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-
+import './../App.css'
 function  Header() {
   return (
     <div className='Header'>

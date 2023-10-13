@@ -12,15 +12,13 @@ import Admin from './Components/PagesContent/Admin/index'
 function App() {
   return (
     <div className="App">
-       {/*  <Header/>
-      <Space className="SideMenuPageContent">
-        <Sidebar/>
-        <PageContentAdmin/>
-      </Space>   */}
-      {/* <HomePage/> */}
+      
+      {/* <HomePage/> */} //
       {/* <SignUp/> */}
       {/* <Login/> */}
-      <User/>
+      <Admin/> 
+      {/*<User>*/ }
+    
     </div>
   );
 }
