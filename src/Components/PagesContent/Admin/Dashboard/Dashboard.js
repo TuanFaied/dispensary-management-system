@@ -17,7 +17,7 @@ function Dashboard() {
   return (
     <div>
       
-        <Typography.Title level = {4}> Dashboard</Typography.Title>
+        
         <Typography.Text style={{fontSize:"20px"}} >Welcome Back,</Typography.Text>
         <div>
           <DispensaryStatusDropdown />

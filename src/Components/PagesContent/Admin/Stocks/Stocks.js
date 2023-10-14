@@ -5,7 +5,14 @@ import data from "./mock.json"
 import { nanoid } from "nanoid";
 import ReadOnlyRow from './ReadOnlyRow';
 import EditTableRow from './EditTableRow';
-
+import { 
+  TableContainer,
+  Table,
+  TableHead,
+  TableBody,
+  TableRow,
+  TableCell,
+  Paper } from '@mui/material'
 
 function Stocks() {
   const [detail,setDetail] = useState(data)
@@ -114,7 +121,7 @@ function Stocks() {
 
   return (
     <div>
-      <Typography.Title level = {4}> Stocks</Typography.Title>
+      
       <form onSubmit={handleAddFormSubmit}>
       <Space direction="horizontal" style={{maxWidth:"90%"}}>
         <Space direction="vertical">
@@ -171,8 +178,9 @@ function Stocks() {
 
       </Space>
       </form>
+      <br></br>
       <form onSubmit={handleEditFormSubmit}>
-        <table>
+        {/* <table>
           <thead>
             <tr>
               <th>Medicine ID</th>
@@ -201,7 +209,36 @@ function Stocks() {
             ))}
 
           </tbody>
-        </table>
+        </table> */}
+        <TableContainer component={Paper} sx={{ maxHeight: '500px', maxWidth: "100%" }}>
+      <Table aria-aria-label='simple table' stickyHeader>
+        <TableHead>
+          <TableRow>
+            <TableCell>User ID</TableCell>
+            <TableCell>User Name</TableCell>
+            <TableCell>Medicine</TableCell>
+            <TableCell>Quantity</TableCell>
+            <TableCell>Description</TableCell>
+            <TableCell>Price</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {/* {UserData.map((row) => (
+            <TableRow
+              key={row.id}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+            </TableRow>
+          ))} */}
+        </TableBody>
+
+      </Table>
+
+    </TableContainer>
       </form>
 
 

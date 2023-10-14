@@ -16,7 +16,7 @@ function Schedule() {
   return (
     <div>
     
-      <Typography.Title level = {4}> Schedule</Typography.Title>
+      
       <div>
       <Typography.Title >Reserve your seat</Typography.Title>
       <Space direction="horizontal">

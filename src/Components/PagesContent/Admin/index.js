@@ -20,7 +20,18 @@ function index() {
       <Layout>
         <Header style={headerStyle}><Header1/></Header>
         <Layout hasSider>
-        <Sider style={siderStyle}><SideNavbar/></Sider>
+        <Sider breakpoint="lg"
+        theme="light"
+        collapsedWidth="0"
+        onBreakpoint={(broken) => {
+          console.log(broken);
+        }}
+        onCollapse={(collapsed, type) => {
+          console.log(collapsed, type);
+        }} style={siderStyle}>
+          
+          <SideNavbar/>
+          </Sider>
         <Content ><AppAdminRoute/></Content>
       </Layout>
       </Layout>

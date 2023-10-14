@@ -26,8 +26,8 @@ function Settings() {
     setPassword(newPassword);
   };
   return (
-    <div>
-      <h1>Settings</h1>
+    <div style={{textAlign:"center"}}>
+      
       <ProfilePhoto
         profilePhoto={profilePhoto}
         onProfilePhotoChange={handleProfilePhotoChange}

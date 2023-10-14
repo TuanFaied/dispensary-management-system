@@ -41,7 +41,7 @@ function POS() {
   
   return (
     <div>
-      <Typography.Title level = {4}> POS</Typography.Title>
+      
       
         
       

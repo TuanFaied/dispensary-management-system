@@ -13,7 +13,7 @@ import {
 
 function PatientDetail() {
   return (
-    <><Typography.Title level={4}> Patients Details</Typography.Title>
+    <>
     <TableContainer component={Paper} sx={{ maxHeight: '500px', maxWidth: "100%" }}>
       <Table aria-aria-label='simple table' stickyHeader>
         <TableHead>
