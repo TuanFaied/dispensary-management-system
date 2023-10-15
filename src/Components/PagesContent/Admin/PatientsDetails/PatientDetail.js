@@ -8,6 +8,7 @@ import {
   TableCell,
   Paper } from '@mui/material'
 import PatientSevices from '../../../../Services/PatientSevices'
+import { Typography } from 'antd';
   
 
 
@@ -20,6 +21,7 @@ function PatientDetail() {
     });
   });
   return (
+    <><Typography.Text style={{marginBottom:"100px"}}>Patient Details</Typography.Text>
     
     <TableContainer component={Paper} sx={{ maxHeight: '500px', maxWidth: "100%" }}>
       <Table aria-aria-label='simple table' stickyHeader>
@@ -41,14 +43,14 @@ function PatientDetail() {
               <TableCell>{row.p_ID}</TableCell>
               <TableCell>{row.p_name}</TableCell>
               <TableCell>{row.p_email}</TableCell>
-              <TableCell>{row.Mobileno}</TableCell>
+              <TableCell>{row.mobile_no}</TableCell>
             </TableRow>
           ))}
         </TableBody>
 
       </Table>
 
-    </TableContainer>
+    </TableContainer></>
   )
 }
 

@@ -1,6 +1,7 @@
-import React, { Fragment, useEffect, useState } from 'react'
-import { DatePicker, Input, Space,Typography } from 'antd'
+import React, { useEffect, useState } from 'react'
+import { DatePicker, Input, Row, Space,Typography } from 'antd'
 import { Button } from '@mui/material'
+import { DeleteFilled} from '@ant-design/icons';
 import UpdateFeild from './UpdateDrawer'
 import { 
   TableContainer,
@@ -37,7 +38,14 @@ function Stocks() {
     StockSevices.createMedicine(post).then(res=>console.log(res))
     .catch(err=>console.log(err))
   }
-  
+  const deleteMedicine=(id)=>{
+    StockSevices.deleteMedicine(id).then((res)=>{
+      setmData((prevMdata)=>prevMdata.filter((row)=> row.m_ID !==id))
+    })
+    .catch((error)=>{
+      console.error('Error deleting row:', error);
+    } )
+  }
 
   return (
     <div>
@@ -45,8 +53,8 @@ function Stocks() {
       <form onSubmit={handleClick}>
       <Space direction="horizontal" style={{maxWidth:"90%"}}>
         <Space direction="vertical">
-        <Typography.Text >Medicine ID</Typography.Text>
-        <Input name="m_ID" required="required" placeholder="123" onChange={(e)=>handleChange(e)}/>
+        {/* <Typography.Text >Medicine ID</Typography.Text>
+        <Input name="m_ID" required="required" placeholder="123" onChange={(e)=>handleChange(e)}/> */}
         </Space>
         <Space direction="vertical">
           <Typography.Text >Name</Typography.Text>
@@ -120,7 +128,7 @@ function Stocks() {
               <TableCell>{row.expire_date}</TableCell>
               <TableCell>{row.quantity}</TableCell>
               <TableCell>{row.unit_price}</TableCell>
-              <TableCell><UpdateFeild/></TableCell>
+              <TableCell><UpdateFeild/> <Button  color="error" size="large" onClick={()=>deleteMedicine(row.m_ID)}><DeleteFilled /></Button></TableCell>
             </TableRow>
           ))} 
         </TableBody>
