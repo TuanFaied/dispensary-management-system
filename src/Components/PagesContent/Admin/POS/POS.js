@@ -48,26 +48,26 @@ function POS() {
         <Space direction="horizontal" >
           <Space direction="vertical">
             <label>User Id</label>
-            <Input name="u_ID"  onChange={(e)=>handleChange(e)}/>
+            <Input name="u_ID" required="required"  onChange={(e)=>handleChange(e)}/>
           </Space>
           <Space direction="vertical">
             <label>Medicine</label>
-            <Input name="medicine_name"  onChange={(e)=>handleChange(e)} autoSize/>
+            <Input name="medicine_name" required="required" onChange={(e)=>handleChange(e)} autoSize/>
           </Space>
           <Space direction="vertical">
             <label>Discription</label>
-            <TextArea  name="discription"  onChange={(e)=>handleChange(e)} autoSize/>
+            <TextArea  name="discription" required="required" onChange={(e)=>handleChange(e)} autoSize/>
           </Space><Space direction="vertical">
             <label>Quantity</label>
-            <Input name="quantity"  onChange={(e)=>handleChange(e)}/>
+            <Input name="quantity" required="required"  onChange={(e)=>handleChange(e)}/>
           </Space>
           <Space direction="vertical">
             <label>Price</label>
-            <Input name="amount"  onChange={(e) => handleChange(e)} />
+            <Input name="amount" required="required" onChange={(e) => handleChange(e)} />
           </Space>
           <Space direction="vertical">
             <label>Date</label>
-            <DatePicker name="r_date"  onChange={(date,dateString) => handleChange(date,dateString)}/>
+            <DatePicker name="r_date" required="required" onChange={(date,dateString) => handleChange(date,dateString)}/>
           </Space>
   
         </Space>
