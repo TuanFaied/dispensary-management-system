@@ -1,41 +1,47 @@
-import React, { useState } from 'react';
-import ProfilePhoto from './ProfilePhoto';
-import Username from './Username';
-import Email from './Email';
-import Password from './Password';
+import { Button } from '@mui/material';
+import { Input, Space } from 'antd';
+import React from 'react';
+import './Settings.css'
 
 function Settings() {
-  const [profilePhoto, setProfilePhoto] = useState(null);
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
-  const handleProfilePhotoChange = (newPhoto) => {
-    setProfilePhoto(newPhoto);
-  };
-
-  const handleUsernameChange = (newUsername) => {
-    setUsername(newUsername);
-  };
-
-  const handleEmailChange = (newEmail) => {
-    setEmail(newEmail);
-  };
-
-  const handlePasswordChange = (newPassword) => {
-    setPassword(newPassword);
-  };
   return (
-    <div style={{textAlign:"center"}}>
+    <div className="centered-form " >
+      <form>
+        <Space direction="vertical">
+        <Space direction="vertical">
+        <label>Name</label>
+        <Input/>
+        </Space >
+        <Space direction="vertical">
+        <label>Email</label>
+        <Input/>
+        </Space>
+        <Space direction="vertical">
+        <label>Current Password</label>
+        <Input.Password/>
+        </Space>
+        <div>
+        <Space direction="horizontal">
+          <Space direction="vertical">
+            <label>New Password </label>
+            <Input.Password/>
+          </Space>
+          <Space direction="vertical">
+            <label>New Password </label>
+            <Input.Password/>
+          </Space>
+        </Space>
+        </div>
+        <br/>
+        <Space style={{textAlign:"center" }}>
+        <Button variant="contained">Save Change</Button>
+        </Space>
+        </Space>
+      </form>
+
       
-      <ProfilePhoto
-        profilePhoto={profilePhoto}
-        onProfilePhotoChange={handleProfilePhotoChange}
-      />
-      <Username username={username} onUsernameChange={handleUsernameChange} />
-      <Email email={email} onEmailChange={handleEmailChange} />
-      <Password password={password} onPasswordChange={handlePasswordChange} />
-      <button >Save Changes</button>
+      
     </div>
   )
 }

@@ -1,18 +1,25 @@
 import { Calendar,theme, Card, Progress, Space, Statistic, Typography } from 'antd'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import GroupsIcon from '@mui/icons-material/Groups';
 
 
 import DispensaryStatusDropdown from './DispensaryStatusDropdown';
+import DashboardServices from '../../../../Services/DashboardServices';
 
 function Dashboard() {
   const stock =50;
+  const[totalUser,setTotalUser]=useState();
   const { token } = theme.useToken();
   const wrapperStyle = {
     width: 300,
     border: `1px solid ${token.colorBorderSecondary}`,
     borderRadius: token.borderRadiusLG,
   };
+  useEffect(()=>{
+    DashboardServices.getTotalUser().then((res)=>{
+      setTotalUser(res.data)
+    })
+  })
   
   return (
     <div>
@@ -35,7 +42,7 @@ function Dashboard() {
               }}
             
             />
-            <Statistic  title="Total User"  value={100}/>
+            <Statistic  title="Total User"  value={totalUser}/>
           </Space>
           </Card>
           <Card size="small"  >

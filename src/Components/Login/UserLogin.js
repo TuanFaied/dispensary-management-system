@@ -1,3 +1,4 @@
+import Input from 'antd/es/input/Input'
 import React from 'react'
 
 function UserLogin() {
@@ -12,9 +13,9 @@ function UserLogin() {
                 </div>
                 <div className="password">
                     <label className="label">Password</label>
-                    <input className="input" type="password" name="password"
-                    />
-                   
+                    {/* <input className="input" type="password" name="password"
+                    /> */}
+                   <Input.Password/>
                 </div>
                
                 <div>
