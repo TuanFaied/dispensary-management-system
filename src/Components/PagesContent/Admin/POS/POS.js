@@ -12,31 +12,24 @@ import {
   Paper } from '@mui/material'
 
 import MedicalRecordSevices from '../../../../Services/MedicalRecordSevices'
+import AddMedicalRecordService from '../../../../Services/AddMedicalRecordService'
 function POS() {
-  const [data,setData] =useState([
-    {userid:"", 
-    medicine:"",
+  const [post,setPost] =useState([
+    {u_ID:"", 
+    medicine_name:"",
     quantity:"",
     discription:"",
-    price:"",
-    date:""}])
+    amount:"",
+    r_date:""}])
 
-  const handleClick=()=>{
-    const newData = {
-      userid: "",
-      medicine: "",
-      quantity: "",
-      discription: "",
-      price: "",
-      date: ""
-    };
-    setData([...data, newData]);
+  const handleClick=(e)=>{
+    e.preventDefault()
+    AddMedicalRecordService.createRecords(post).then(res=>console.log(res))
+    .catch(err=>console.log(err))
   }
-  const handleChange = (e,i)=>{
-    const {name,value}=e.target
-    const onchangeval = [...data]
-    onchangeval[i][name]=value
-    setData(onchangeval)
+  const handleChange = (e,date)=>{
+    const value = e.target ? e.target.value : date;
+    setPost({ ...post, [e.target ? e.target.name : 'r_date']: value });
   }
   
 
@@ -46,45 +39,45 @@ function POS() {
       setRecord(res.data)
     })
     
-  })
+  },[])
 
   return (
     <div>
-      <form>
-        {data.map((item,i) => (
-        <Space direction="horizontal" key={i}>
+      <form onSubmit={handleClick}>
+        
+        <Space direction="horizontal" >
           <Space direction="vertical">
             <label>User Id</label>
-            <Input name="userid" value={item.userid} onChange={(e)=>handleChange(e,i)}/>
+            <Input name="u_ID"  onChange={(e)=>handleChange(e)}/>
           </Space>
           <Space direction="vertical">
             <label>Medicine</label>
-            <Input name="medicine" value={item.medicine} onChange={(e)=>handleChange(e,i)} autoSize/>
+            <Input name="medicine_name"  onChange={(e)=>handleChange(e)} autoSize/>
           </Space>
           <Space direction="vertical">
             <label>Discription</label>
-            <TextArea  name="discription" value={item.discription} onChange={(e)=>handleChange(e,i)} autoSize/>
+            <TextArea  name="discription"  onChange={(e)=>handleChange(e)} autoSize/>
           </Space><Space direction="vertical">
             <label>Quantity</label>
-            <Input name="quantity" value={item.quantity} onChange={(e)=>handleChange(e,i)}/>
+            <Input name="quantity"  onChange={(e)=>handleChange(e)}/>
           </Space>
           <Space direction="vertical">
             <label>Price</label>
-            <Input name="price" value={item.price} onChange={(e) => handleChange(e, i)} />
+            <Input name="amount"  onChange={(e) => handleChange(e)} />
           </Space>
           <Space direction="vertical">
             <label>Date</label>
-            <DatePicker value={item.date} onChange={(date) => handleChange({ target: { name: "date", value: date } }, i)}/>
+            <DatePicker name="r_date"  onChange={(date,dateString) => handleChange(date,dateString)}/>
           </Space>
   
         </Space>
-        ))}
+        
 
         <Space>
           
         </Space>
         <Space style={{display:"flex",justifyContent:"center",marginTop:"15px"}} >
-          <Button variant="contained" onClick={handleClick}>Add</Button>
+          <Button variant="contained" type="submit" >Add</Button>
         </Space>
       </form>
       <br/>
@@ -103,7 +96,7 @@ function POS() {
         <TableBody>
           {record.map((row) => (
             <TableRow
-              key={row.p_ID}
+              key={row.r_ID}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
       
               <TableCell>{row.u_ID}</TableCell>

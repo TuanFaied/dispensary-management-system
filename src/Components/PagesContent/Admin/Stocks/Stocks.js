@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { Input, Space,Typography } from 'antd'
 import { Button } from '@mui/material'
 import data from "./mock.json"
@@ -13,6 +13,7 @@ import {
   TableRow,
   TableCell,
   Paper } from '@mui/material'
+import StockSevices from '../../../../Services/StockSevices';
 
 function Stocks() {
   const [detail,setDetail] = useState(data)
@@ -118,6 +119,13 @@ function Stocks() {
 
     setDetail (newContacts);
   };
+  const[mdata,setmData]=useState([])
+  useEffect(()=>{
+    StockSevices.getAllMedicine().then((res)=>{
+      setmData(res.data)
+    })
+  })
+  
 
   return (
     <div>
@@ -180,60 +188,31 @@ function Stocks() {
       </form>
       <br></br>
       <form onSubmit={handleEditFormSubmit}>
-        {/* <table>
-          <thead>
-            <tr>
-              <th>Medicine ID</th>
-              <th>Name</th>
-              <th>Expire Date</th>
-              <th>Quantity</th>
-              <th>Unit Price</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {detail.map((details)=>( 
-              <Fragment key={details.id}>
-                  {editDetailId === details.id ? (
-                    <EditTableRow 
-                      editFormData={editFormData}
-                      handleEditFormChange ={handleEditFormChange}
-                      handleCancelClick = {handleCancelClick}/>
-                  ) :(
-                    <ReadOnlyRow
-                      details ={details}
-                      handleEditClick ={handleEditClick}
-                      handleDeleteClick ={handleDeleteClick}/>
-                  ) }
-              </Fragment>  
-            ))}
-
-          </tbody>
-        </table> */}
+        
         <TableContainer component={Paper} sx={{ maxHeight: '500px', maxWidth: "100%" }}>
       <Table aria-aria-label='simple table' stickyHeader>
         <TableHead>
           <TableRow>
-            <TableCell>User ID</TableCell>
-            <TableCell>User Name</TableCell>
-            <TableCell>Medicine</TableCell>
+            <TableCell>Medicine ID</TableCell>
+            <TableCell>Name</TableCell>
+            <TableCell>Expire Date</TableCell>
             <TableCell>Quantity</TableCell>
-            <TableCell>Description</TableCell>
-            <TableCell>Price</TableCell>
+            <TableCell>Unit Price</TableCell>
+            <TableCell>Actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {/* {UserData.map((row) => (
+           {mdata.map((row) => (
             <TableRow
-              key={row.id}
+              key={row.m_ID}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
+              <TableCell>{row.m_ID}</TableCell>
+              <TableCell>{row.m_name}</TableCell>
+              <TableCell>{row.expire_date}</TableCell>
+              <TableCell>{row.quantity}</TableCell>
+              <TableCell>{row.unit_price}</TableCell>
             </TableRow>
-          ))} */}
+          ))} 
         </TableBody>
 
       </Table>
