@@ -9,6 +9,7 @@ import SignUp from './Components/SignUP/index'
 import Login from './Components/Login/index'
 import User from './Components/PagesContent/User/index'
 import Admin from './Components/PagesContent/Admin/index'
+import Pages from './Components/AppRoutes/index'
 function App() {
   return (
     <div className="App">
@@ -16,7 +17,7 @@ function App() {
       {/* <HomePage/> */} 
       {/* <SignUp/> */}
       {/* <Login/> */}
-      <Admin/> 
+      <Pages/> 
       {/*<User>*/ }
     
     </div>

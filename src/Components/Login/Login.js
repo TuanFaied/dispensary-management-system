@@ -13,6 +13,8 @@ function Login() {
       const handleUserButtonClick = () => {
         setShowAdminLogin(false);
       };
+     
+  
   return (
     <div className="container">
         <div className="app-wrapper">
@@ -24,7 +26,7 @@ function Login() {
                     onClick={handleAdminButtonClick}>Admin</Button>
 
             </div>
-            { showAdminLogin ? <AdminLogin/> : <UserLogin/>}
+            { showAdminLogin ? <AdminLogin /> : <UserLogin/>}
 
         </div>
     </div>

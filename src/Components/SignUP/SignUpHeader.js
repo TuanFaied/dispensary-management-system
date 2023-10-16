@@ -3,7 +3,9 @@ import logo from '../../Images/logo.png'
 import MenuIcon from '@mui/icons-material/Menu';
 import './SignUpHeader.css'
 
+
 function SignUpHeader() {
+	
     const navRef = useRef();
     const showNavbar=()=>{
         navRef.current.classList.toggle("responsive_nav");
@@ -16,6 +18,7 @@ function SignUpHeader() {
               
 				
 				<a href="/LogIn">Log In</a>
+				<a href="/">Home</a>
 				
 				<button
 					className="nav-btn nav-close-btn"
