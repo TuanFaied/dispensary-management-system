@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-
-function Home() {
+import { useLocation } from 'react-router-dom';
+function Home(s) {
+  const loc = useLocation();
 
   return (
    <> <div>Home</div>
-      <h1>Seat Reservation</h1>
+      <h1>hai</h1>
       
       </>  
   )

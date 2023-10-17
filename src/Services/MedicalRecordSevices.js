@@ -6,6 +6,11 @@ class MedicalRecordServices{
     getRecords(){
         return axios.get(URL);
     }
+    getUserRecords(url){
+        return axios.get(url)
+    }
+
+
 }
 
 export default new MedicalRecordServices()

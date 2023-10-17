@@ -2,14 +2,16 @@ import { Button } from '@mui/material';
 import { Input, Space } from 'antd';
 import React, { useState,useEffect } from 'react';
 import './Settings.css';
-import SettingsServices from '../../../../Services/SettingsServices';
+import SettingsServices from '../../../../Services/UserSettingServices';
 
 function Settings() {
+
+  const p_ID = 1;
   const [management, setManagement] = useState({
-    "mg_ID":"LF001",
-    mg_name: "",
-    mg_email: "",
-    mg_password: "",
+    "p_ID":p_ID,
+    p_name: "",
+    p_email: "",
+    p_password: "",
     
   });
 const [password,setPassword]=useState({
@@ -24,14 +26,14 @@ const [password,setPassword]=useState({
  
   
 
-  const isPasswordChange = management.mg_password !== "" || password.confirmPassword !== "";
-  const isSaveEnabled = management.mg_name !== "" && management.mg_email !=="" &&  (management.mg_password !== "" && management.mg_password === password.confirmPassword);
+  const isPasswordChange = management.p_password !== "" || password.confirmPassword !== "";
+  const isSaveEnabled = management.p_name !== "" && management.p_email !=="" &&  (management.p_password !== "" && management.p_password === password.confirmPassword);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     
       
-      SettingsServices.updateManagement(management)
+      SettingsServices.updatePatient(management)
         .then(res => {
           console.log(res);
         })
@@ -48,7 +50,7 @@ const [password,setPassword]=useState({
           <Space direction="vertical">
             <label>Name</label>
             <Input
-              name="mg_name"
+              name="p_name"
               required
               placeholder="Enter User Name"
               onChange={handleChange}
@@ -58,7 +60,7 @@ const [password,setPassword]=useState({
           <Space direction="vertical">
             <label>Email</label>
             <Input
-              name="mg_email"
+              name="p_email"
               required
               placeholder="...@gmail.com"
               onChange={handleChange}
@@ -68,7 +70,7 @@ const [password,setPassword]=useState({
           <Space direction="vertical">
             <label>New Password</label>
             <Input.Password
-              name="mg_password"
+              name="p_password"
               onChange={handleChange}
               
             />

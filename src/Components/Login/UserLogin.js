@@ -3,7 +3,7 @@ import React,{  useState }  from 'react'
 import { useNavigate } from 'react-router-dom'
 import LoginServices from '../../Services/LoginServices'
 function UserLogin() {
-    const navigate = useNavigate()
+    const nav = new useNavigate()
     const [user,setUser]=useState([
         {           
             p_email: "",
@@ -22,9 +22,9 @@ function UserLogin() {
         const GET_LOGIN_USER_URL=`http://localhost:8080//User/${user.p_email}`
         
        LoginServices.getUser(GET_LOGIN_USER_URL).then((res)=>{
-        console.log(res.data[0].p_password)
+        console.log(res.data)
              if(res.data[0].p_password===user.p_password){
-                 navigate("/User",{state: {users: res.data}})
+                 nav("/User/*", {state: { userData : res.data}})
              }
              else{
                  console.log("user not found")

@@ -1,11 +1,11 @@
 import axios from "axios";
 
-const URL="http://localhost:8080/Admin/Settings/update"
+const URL="http://localhost:8080/User/Settings/update"
 
 const GET_MANAGEMENT_URL="http://localhost:8080/Admin/Settings"
 
 class SettingsServices{
-    updateManagement(details){
+    updatePatient(details){
         return axios.put(URL,details);
     }
     getAllManagement(){
