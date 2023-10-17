@@ -5,11 +5,9 @@ import LoginServices from '../../Services/LoginServices'
 function UserLogin() {
     const navigate = useNavigate()
     const [user,setUser]=useState([
-        {
-            
+        {           
             p_email: "",
-            p_password: ""
-            
+            p_password: ""           
         }
     ])
 
@@ -21,16 +19,17 @@ function UserLogin() {
 
     const handlClick= (e)=>{
         e.preventDefault()
+        const GET_LOGIN_USER_URL=`http://localhost:8080//User/${user.p_email}`
         
-        
-       LoginServices.getUser().then((res)=>{
-        res.data.forEach(element => {
-            if(element===user.p_password){
-                navigate("/User")
-            }
-        });
-        console.log(res.data)
-       })
+       LoginServices.getUser(GET_LOGIN_USER_URL).then((res)=>{
+        console.log(res.data[0].p_password)
+             if(res.data[0].p_password===user.p_password){
+                 navigate("/User",{state: {users: res.data}})
+             }
+             else{
+                 console.log("user not found")
+             }
+      })
        
         
     
@@ -48,8 +47,7 @@ function UserLogin() {
                 </div>
                 <div className="password">
                     <label className="label">Password</label>
-                    {/* <input className="input" type="password" name="password"
-                    /> */}
+                    
                    <Input.Password name="p_password" onChange={(e)=>handleChange(e)}/>
                 </div>
                

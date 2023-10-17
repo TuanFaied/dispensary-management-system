@@ -15,17 +15,17 @@ function UserSideNavBar() {
             {
                 icon : <Home/>,
                 label:"Home",
-                key:'/Home'   
+                key:'/User/Home'   
             },
             {
                 icon : <History/>,
                 label:"MedicalHistory",
-                key:'/MedicalHistory'   
+                key:'/User/MedicalHistory'   
             },
             {
                 icon : <SettingsIcon/>,
                 label:"Settings",
-                key:'/Settings'   
+                key:'/User/Settings'   
             },
 
         ]}

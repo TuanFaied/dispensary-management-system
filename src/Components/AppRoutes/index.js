@@ -13,8 +13,8 @@ function index() {
         <Route path="/" element={<HomePage/>}/> 
         <Route path="/SignUp" element={<SignUp/>}/> 
         <Route path="/Login" element={<Login/>}/> 
-        <Route path="/Admin" element={<Admin/>}/> 
-        <Route path="/User" element={<User/>}/> 
+        <Route path="/Admin/*" element={<Admin/>}/> 
+        <Route path="/User/*" element={<User/>}/> 
        
     </Routes>
   )

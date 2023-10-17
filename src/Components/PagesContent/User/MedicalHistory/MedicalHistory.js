@@ -11,7 +11,7 @@ import {
 function MedicalHistory() {
   return (
     <><div>MedicalHistory</div>
-      <TableContainer component={Paper} sx={{ maxHeight: '580px' }}>
+      <TableContainer component={Paper} sx={{ maxHeight: '500px' }}>
         <Table aria-aria-label='simple table' stickyHeader>
           <TableHead>
             <TableRow>
