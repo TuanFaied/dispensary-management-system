@@ -2,23 +2,23 @@
 function Validation(values) {
     let errors={};
 
-    if(!values.name){
+    if(!values.p_name){
         errors.name="Name is required."
     }
-    if(!values.email){
+    if(!values.p_email){
         errors.email="Email is required"
     }
-    else if(!/\S+@\S+\.\S+/.test(values.email)){
+    else if(!/\S+@\S+\.\S+/.test(values.p_email)){
         errors.email="Email is invalid."
     }
 
-    if(!values.password){
+    if(!values.p_password){
         errors.password = "Password is required"
     }
-    else if(values.password.length < 5){
+    else if(values.p_password.length < 5){
         errors.password = "Password must be more then five characters"
     }
-    if(values.password != values.repassword){
+    if(values.p_password != values.repassword){
         errors.repassword = "Enter the correct password"
     }
 

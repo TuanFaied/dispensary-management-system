@@ -2,6 +2,7 @@ import Input from 'antd/es/input/Input'
 import React, {  useState } from 'react'
 import LoginServices from '../../Services/LoginServices'
 import { useNavigate } from 'react-router-dom'
+
 function AdminLogin() {
     const navigate = useNavigate()
    
@@ -13,33 +14,29 @@ function AdminLogin() {
             
         }
     ])
-    const [post,setPost]=useState([
-        {
-            
-            email: "",
-            password: ""
-            
-        }
-    ])
+    
     const handleChange = (e)=>{
         const { name, value } = e.target;
     setAdmin({ ...admin, [name]: value });
     } 
     
     
-    const handlClick=(e)=>{
+    const handlClick=async (e)=>{
         e.preventDefault()
         
-
-        LoginServices.getAdmin().then((res) => {
-            
-          setPost(res.data)})
         
-          if(post.email === admin.mg_email && post.password === admin.mg_password ){
+      LoginServices.getAdmin().then((res) => {
+           if(res.data[0] === admin.mg_password){
             navigate("/Admin")
-          }
+            
+           } 
+           console.log(res.data)
+            console.log(admin.mg_email)
+        })
     }
 
+    
+    
   return (
     <div>
     

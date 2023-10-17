@@ -11,12 +11,12 @@ function AppRoutes() {
   return (
     
         <Routes>
-            <Route path="/Dashboard" element={<Dashboard/>}/>
-            <Route path="/PatientsDetails" element={<PatientDetail/>}/>
-            <Route path="/pos" element={<POS/>}/>
-            <Route path="/schedule" element={<Schedule/>}/>
-            <Route path="/settings" element={<Settings/>}/>
-            <Route path="/stocks" element={<Stocks/>}/>
+            <Route path="/Admin/Dashboard" element={<Dashboard/>}/>
+            <Route path="/Admin/PatientsDetails" element={<PatientDetail/>}/>
+            <Route path="/Admin/pos" element={<POS/>}/>
+            <Route path="/Admin/schedule" element={<Schedule/>}/>
+            <Route path="/Admin/settings" element={<Settings/>}/>
+            <Route path="/Admin/stocks" element={<Stocks/>}/>
         </Routes>
    
   );

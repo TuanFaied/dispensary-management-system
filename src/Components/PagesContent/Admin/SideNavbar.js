@@ -26,32 +26,32 @@ function SideNavbar() {
             {
                 icon : <DashboardIcon/>,
                 label:"Dashboard",
-                key:'/Dashboard'
+                key:'/Admin/Dashboard'
             },
             {
                 icon : <CalendarMonthIcon/>,
                 label:"Schedule",
-                key:'/Schedule'
+                key:'/Admin/Schedule'
             },
             {
                 icon : <PointOfSaleIcon/>,
                 label:"POS",
-                key:'/POS'
+                key:'/Admin/POS'
             },
             {
                 icon : <DetailsIcon/>,
                 label:"Patients Details",
-                key:'/PatientsDetails'
+                key:'/Admin/PatientsDetails'
             },
             {
                 icon : <InventoryIcon/>,
                 label:"Stocks",
-                key:'/Stocks'
+                key:'/Admin/Stocks'
             },
             {
                 icon : <SettingsIcon/>,
                 label:"Settings",
-                key:'/Settings'
+                key:'/Admin/Settings'
             }
 
     ]}>

@@ -14,6 +14,7 @@ function index() {
         <Route path="/Login" element={<Login/>}/> 
         <Route path="/Admin" element={<Admin/>}/> 
         <Route path="/User" element={<User/>}/> 
+        
     </Routes>
   )
 }
