@@ -5,6 +5,7 @@ import SignUp from '../SignUP/index'
 import HomePage from '../HomePage/index'
 import React from 'react'
 import { Routes,Route } from 'react-router-dom'
+import AppAdminRoutes from '../AppAdminRoutes/index'
 
 function index() {
   return (
@@ -14,7 +15,7 @@ function index() {
         <Route path="/Login" element={<Login/>}/> 
         <Route path="/Admin" element={<Admin/>}/> 
         <Route path="/User" element={<User/>}/> 
-        
+       
     </Routes>
   )
 }
