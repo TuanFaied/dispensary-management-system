@@ -27,11 +27,11 @@ function PatientDetail() {
       <Table aria-aria-label='simple table' stickyHeader>
         <TableHead>
           <TableRow>
-            <TableCell>User Profile</TableCell>
-            <TableCell>User ID</TableCell>
-            <TableCell>User Name</TableCell>
-            <TableCell>Email</TableCell>
-            <TableCell>Mobile No</TableCell>
+           
+            <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>User ID</TableCell>
+            <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>User Name</TableCell>
+            <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>Email</TableCell>
+            <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>Mobile No</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -39,7 +39,7 @@ function PatientDetail() {
             <TableRow
               key={row.p_ID}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-              <TableCell>{row.avatar}</TableCell>
+              
               <TableCell>{row.p_ID}</TableCell>
               <TableCell>{row.p_name}</TableCell>
               <TableCell>{row.p_email}</TableCell>

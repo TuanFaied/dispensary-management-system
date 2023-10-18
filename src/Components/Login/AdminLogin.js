@@ -2,7 +2,7 @@ import Input from 'antd/es/input/Input'
 import React, {  useState } from 'react'
 import LoginServices from '../../Services/LoginServices'
 import { useNavigate } from 'react-router-dom'
-
+import { Alert } from 'antd';
 function AdminLogin() {
     const navigate = useNavigate()
    
@@ -19,7 +19,7 @@ function AdminLogin() {
         const { name, value } = e.target;
     setAdmin({ ...admin, [name]: value });
     } 
-    
+    const [showAlert, setShowAlert] = useState(false);
     
     const handlClick=async (e)=>{
         e.preventDefault()
@@ -30,6 +30,9 @@ function AdminLogin() {
             navigate("/Admin")
             
            } 
+           else{
+            setShowAlert(true);
+           }
            console.log(res.data)
             console.log(admin.mg_email)
         })
@@ -62,6 +65,14 @@ function AdminLogin() {
                         Log In
                     </button>
                 </div>
+                {showAlert && ( 
+                <Alert
+                    type="error"
+                    message="Incorrect email or password"
+                    banner
+                    closable 
+                    onClose={() => setShowAlert(false)} 
+                />)}
             </form>
             
             </div>

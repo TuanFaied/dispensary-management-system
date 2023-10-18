@@ -3,6 +3,7 @@ import React,{  useState }  from 'react'
 import { useNavigate } from 'react-router-dom'
 import LoginServices from '../../Services/LoginServices'
 import useUserStore from '../store/useStore'
+import { Alert } from 'antd';
 function UserLogin() {
     const nav = new useNavigate()
     const [user,setUser]=useState([
@@ -18,7 +19,7 @@ function UserLogin() {
         const { name, value } = e.target;
         setUser({ ...user, [name]: value });
     } 
-
+    const [showAlert, setShowAlert] = useState(false);
 
     const handlClick= (e)=>{
         e.preventDefault()
@@ -31,7 +32,8 @@ function UserLogin() {
                  nav("/User/*", {state: { userData : res.data}})
              }
              else{
-                 console.log("user not found")
+                setShowAlert(true);
+                 
              }
       })
        
@@ -60,6 +62,14 @@ function UserLogin() {
                         Log In
                     </button>
                 </div>
+                {showAlert && ( 
+                <Alert
+                    type="error"
+                    message="Incorrect email or password"
+                    banner
+                    closable 
+                    onClose={() => setShowAlert(false)} 
+                />)}
             </form>
   )
 }

@@ -110,12 +110,12 @@ function Stocks() {
       <Table aria-aria-label='simple table' stickyHeader>
         <TableHead>
           <TableRow>
-            <TableCell>Medicine ID</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Expire Date</TableCell>
-            <TableCell>Quantity</TableCell>
-            <TableCell>Unit Price</TableCell>
-            <TableCell>Actions</TableCell>
+            <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>Medicine ID</TableCell>
+            <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>Name</TableCell>
+            <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>Expire Date</TableCell>
+            <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>Quantity</TableCell>
+            <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>Unit Price</TableCell>
+            <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>Actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

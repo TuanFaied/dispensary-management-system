@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import Validation from './Validation';
 import './SignUpHeader.css'
 import RegistrationSevices from '../../Services/RegistrationSevices';
-import { Input } from 'antd';
-import { useRef } from 'react';
+import { Input ,Alert} from 'antd';
+
 import { useNavigate } from 'react-router-dom';
 
 function SignUp() {
@@ -26,11 +26,15 @@ function SignUp() {
     }
     const handleClick=(e)=>{
         e.preventDefault()
-        setErrors(Validation(values));
-        if(Object.keys(errors).length === 0){
-        RegistrationSevices.registor(values).then(res=>console.log(res))
-        .catch(err=>console.log(err))
-        navigate("/Login")
+        // console.log(Validation(values))
+        if(Object.keys(Validation(values)).length === 0){
+            RegistrationSevices.registor(values).then(res=>console.log(res))
+            .catch(err=>console.log(err))
+            navigate("/Login")
+        }
+        else{
+            setErrors(Validation(values));
+            return <Alert type="error" message="Error" banner />
          }
     }
    
@@ -44,7 +48,7 @@ function SignUp() {
             <form className="form-wrapper" onSubmit={handleClick}>
                 <div className="name">
                     <label className="label">Name</label>
-                    <input className="input" placeholder="Jonh" type="text" name="p_name" 
+                    <input className="input" placeholder="Jonh" required  type="text" name="p_name" 
                         
                         onChange={handleChange}
                         />
@@ -52,21 +56,21 @@ function SignUp() {
                 </div>
                 <div className="email">
                     <label className="label">Email</label>
-                    <input className="input" placeholder="abc@gmail.com" type="email" name="p_email" 
+                    <input className="input" required placeholder="abc@gmail.com" type="email" name="p_email" 
                     
                     onChange={handleChange}/>
                     {errors.email && <p className="error">{errors.email}</p>}
                 </div>
                 <div className="password">
                     <label className="label">Password</label>
-                    <Input.Password className="input" type="password" name="p_password"
+                    <Input.Password className="input" required  type="password" name="p_password"
                     
                     onChange={handleChange}/>
                     {errors.password && <p className="error">{errors.password}</p>}
                 </div>
                 <div className="password">
                     <label className="label">Re-enter Password</label>
-                    <Input.Password className="input" type="password" name="repassword"
+                    <Input.Password className="input" required  type="password" name="repassword"
                     
                     onChange={handleChange}/>
                     {errors.repassword && <p className="error">{errors.repassword}</p>}

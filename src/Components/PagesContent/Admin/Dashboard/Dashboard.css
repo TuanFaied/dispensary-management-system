@@ -1,0 +1,45 @@
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Centers vertically within the viewport height */
+  }
+
+  .centered-space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+  }
+  .space-align-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .space-align-block {
+    flex:none;
+    margin: 8px 40%;
+    padding: 4px;
+    
+  }
+  .space-align-block1 {
+    flex:none;
+    margin: 8px 15%;
+    padding: 4px;
+    
+  }
+  .space-align-block .mock-block {
+    display: inline-block;
+    padding: 32px 8px 16px;
+    background: rgba(150, 150, 150, 0.2);
+  }
+  @media only screen and (max-width: 1024px){
+    .space-align-block1 .A{
+        
+        margin: 8px 0;
+    }
+    .space-align-container{
+        flex-direction: column;
+    }
+  }

@@ -28,9 +28,9 @@ function BookedSeatStatus() {
         <Table aria-aria-label='simple table' stickyHeader >
             <TableHead>
                 <TableRow>
-                    <TableCell>Seat No</TableCell>
-                    <TableCell>Patient Name</TableCell>
-                    <TableCell>Status</TableCell>
+                    <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>Seat No</TableCell>
+                    <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>Patient Name</TableCell>
+                    <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>Status</TableCell>
                 </TableRow>
             </TableHead>
             <TableBody>

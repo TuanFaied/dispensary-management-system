@@ -69,7 +69,8 @@ function Schedule() {
       <div className="seatbox">
   
       </div>
-      <Space >
+
+      <Space style={{padding:"10px"}} >
       
         
       <Button variant="contained" onClick={handleDelete}>Reset</Button>
