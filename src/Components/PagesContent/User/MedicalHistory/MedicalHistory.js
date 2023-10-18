@@ -35,11 +35,11 @@ useEffect(()=>{
         <Table aria-aria-label='simple table' stickyHeader>
           <TableHead>
             <TableRow>
-              <TableCell>Date</TableCell>
-              <TableCell>Medicine</TableCell>
-              <TableCell>Discription</TableCell>
-              <TableCell>Quantity</TableCell>
-              <TableCell>Amount</TableCell>
+              <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>Date</TableCell>
+              <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>Medicine</TableCell>
+              <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>Discription</TableCell>
+              <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>Quantity</TableCell>
+              <TableCell sx={{background:"rgb(68, 17, 255)",color:"rgb(248, 248, 248)"}}>Amount</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

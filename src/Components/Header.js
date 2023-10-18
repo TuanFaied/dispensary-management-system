@@ -6,16 +6,9 @@ import './../App.css'
 import Dropdown from 'antd/es/dropdown/dropdown';
 function  Header() {
   const items=[
+    
     {
       key:'1',
-      label:(
-        <a target="_blank" href="/Settings">
-          Settings
-        </a>
-      ),
-    },
-    {
-      key:'2',
       label:(
         <a target="_blank" href="/Login">
           Log Out
