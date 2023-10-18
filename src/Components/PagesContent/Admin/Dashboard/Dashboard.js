@@ -12,6 +12,7 @@ import {
 
 import DispensaryStatusDropdown from './DispensaryStatusDropdown';
 import DashboardServices from '../../../../Services/DashboardServices';
+import StockSevices from '../../../../Services/StockSevices';
 
 function Dashboard() {
   const stock=[10,12,13,14,50,16];
@@ -30,6 +31,7 @@ function Dashboard() {
     DashboardServices.getAllMedicine().then((res)=>{
       setDetails(res.data)
     })
+    
     
 
   })
@@ -61,12 +63,12 @@ function Dashboard() {
           <Card size="small"  >
           <Space direction="vertical" className="progress-space" >
             <Typography.Title level = {2}>Medicine Stocks</Typography.Title>
+          {deatils.map((r)=>(
+             <Progress percent={r.quantity/2} status={r.quantity <=10 ? 'exception':"active"} />
+          ))}
+           
+            
           
-          <Progress percent={stock[0]} status={stock[0] <=10 ? 'exception':"active"} />
-          <Progress percent={stock[1]} status={stock[1] <=10 ? 'exception':"active"} />
-          <Progress percent={stock[2]} status={stock[2] <=10 ? 'exception':"active"} />
-          <Progress percent={stock[3]} status={stock[3] <=10 ? 'exception':"active"} />
-          <Progress percent={stock[4]} status={stock[4] <=10 ? 'exception':"active"} />
           </Space>
 
            </Card>
@@ -75,7 +77,7 @@ function Dashboard() {
             <Typography.Title level = {2}>Near Expiry Medicines</Typography.Title>
             <TableContainer>
             <TableBody>
-              {deatils.map((row)=>(
+              {deatils.slice(0,2).map((row)=>(
                 <TableRow key={row.m_ID}>
                   <TableCell>{row.m_name}</TableCell>
                   <TableCell>{row.expire_date}</TableCell>

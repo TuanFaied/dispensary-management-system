@@ -2,6 +2,7 @@ import Input from 'antd/es/input/Input'
 import React,{  useState }  from 'react'
 import { useNavigate } from 'react-router-dom'
 import LoginServices from '../../Services/LoginServices'
+import useUserStore from '../store/useStore'
 function UserLogin() {
     const nav = new useNavigate()
     const [user,setUser]=useState([
@@ -10,6 +11,8 @@ function UserLogin() {
             p_password: ""           
         }
     ])
+
+    const setUserInfo = useUserStore(state => state.setUserInfo)
 
     const handleChange = (e)=>{
         const { name, value } = e.target;
@@ -24,6 +27,7 @@ function UserLogin() {
        LoginServices.getUser(GET_LOGIN_USER_URL).then((res)=>{
         console.log(res.data)
              if(res.data[0].p_password===user.p_password){
+                setUserInfo(res.data[0])
                  nav("/User/*", {state: { userData : res.data}})
              }
              else{

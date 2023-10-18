@@ -5,7 +5,7 @@ import UserSideNavBar from './UserSideNavBar'
 import AppUserRoute from '../../AppUserRoutes'
 import '../../../App.css'
 import { Layout} from 'antd';
-import { useLocation } from 'react-router-dom'
+
 const { Header, Sider, Content } = Layout;
 const headerStyle = {
   height: 80,
@@ -24,7 +24,17 @@ function index() {
       <Layout>
       <Header style={headerStyle}><Header1 /></Header>
       <Layout hasSider>
-      <Sider style={siderStyle}><UserSideNavBar/></Sider>
+      <Sider style={siderStyle} breakpoint="lg"
+        theme="light"
+        collapsedWidth="0"
+        onBreakpoint={(broken) => {
+          console.log(broken);
+        }}
+        onCollapse={(collapsed, type) => {
+          console.log(collapsed, type);
+        }}
+
+      ><UserSideNavBar/></Sider>
         <Content ><AppUserRoute  /></Content>
       </Layout>  
         

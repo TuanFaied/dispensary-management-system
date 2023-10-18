@@ -3,7 +3,7 @@ import '../../../App.css'
 import Header1 from '../../Header'
 import SideNavbar from './SideNavbar'
 import AppAdminRoute from '../../AppAdminRoutes/index'
-import { Layout, Space } from 'antd';
+import { Layout} from 'antd';
 const { Header, Sider, Content } = Layout;
 const headerStyle = {
   height: 80,

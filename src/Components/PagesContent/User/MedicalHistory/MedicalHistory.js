@@ -9,19 +9,24 @@ import {
   Paper } from '@mui/material'
 import MedicalRecordSevices from '../../../../Services/MedicalRecordSevices';
 import { useLocation } from 'react-router-dom';
+import useUserStore from '../../../store/useStore';
 
 function MedicalHistory() {
   // const user=props.lo;
 
 
-  const id =2;
-const[record,setRecord]=useState([]);
+  const[record,setRecord]=useState([]);
+  const userInfo = useUserStore(state => state.userInfo)
+  
+  const id = userInfo.p_ID;
+  console.log(id);
+
 useEffect(()=>{
   const URL=`http://localhost:8080/User/records/${id}`
   MedicalRecordSevices.getUserRecords(URL).then((res)=>{
     setRecord(res.data)
   })
-})
+}, [id])
 
 
   return (
@@ -38,9 +43,9 @@ useEffect(()=>{
             </TableRow>
           </TableHead>
           <TableBody>
-            {record.map((row) => (
+            {record.map((row, idx) => (
               <TableRow
-                key={row.u_ID}
+                key={idx}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                 <TableCell>{row.r_date}</TableCell>
                 <TableCell>{row.medicine_name}</TableCell>
