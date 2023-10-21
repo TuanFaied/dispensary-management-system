@@ -34,7 +34,7 @@ function SignUp() {
         }
         else{
             setErrors(Validation(values));
-            return <Alert type="error" message="Error" banner />
+           
          }
     }
    
