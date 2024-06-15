@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.4</version>
+		<version>3.1.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.dispensaryManagement</groupId>
-	<artifactId>dispensaryManagement</artifactId>
+	<groupId>com.ruhuna</groupId>
+	<artifactId>springbootcrud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>dispensaryManagement</name>
-	<description>project for Dispensary management system</description>
+	<name>springbootcrud</name>
+	<description>Demo project for CRUD</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -42,7 +42,19 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.9.2</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
+
 
 	<build>
 		<plugins>

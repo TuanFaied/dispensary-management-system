@@ -1,10 +1,10 @@
-package com.dispensaryManagement.dispensaryManagement;
+package com.ruhuna.springbootcrud;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DispensaryManagementApplicationTests {
+class SpringbootcrudApplicationTests {
 
 	@Test
 	void contextLoads() {

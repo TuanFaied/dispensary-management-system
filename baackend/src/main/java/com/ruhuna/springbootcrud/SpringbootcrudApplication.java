@@ -1,13 +1,14 @@
-package com.dispensaryManagement.dispensaryManagement;
+package com.ruhuna.springbootcrud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DispensaryManagementApplication {
+public class SpringbootcrudApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DispensaryManagementApplication.class, args);
+		SpringApplication.run(SpringbootcrudApplication.class, args);
+
 	}
 
 }
