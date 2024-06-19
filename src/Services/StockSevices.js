@@ -1,12 +1,12 @@
 import axios from "axios";
 
-const ALL_MEDICINE_URL="http://localhost:8080/Admin/Stock"
+const ALL_MEDICINE_URL="http://localhost:8081/Admin/Stock"
 
-const POST_MEDICINE_DETAILS_URL="http://localhost:8080/Admin/Stock/add"
+const POST_MEDICINE_DETAILS_URL="http://localhost:8081/Admin/Stock/add"
 
-const PUT_MEDICINE_DETAILS_URL="http://localhost:8080/Admin/Stock/update"
+const PUT_MEDICINE_DETAILS_URL="http://localhost:8081/Admin/Stock/update"
 
-const DELETE_MEDICINE_DETAILS_URL="http://localhost:8080/Admin/Stock/"
+const DELETE_MEDICINE_DETAILS_URL="http://localhost:8081/Admin/Stock/"
 class StockServices{
     getAllMedicine(){
         return axios.get(ALL_MEDICINE_URL);

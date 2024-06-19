@@ -22,7 +22,7 @@ function MedicalHistory() {
   console.log(id);
 
 useEffect(()=>{
-  const URL=`http://localhost:8080/User/records/${id}`
+  const URL=`http://localhost:8081/User/records/${id}`
   MedicalRecordSevices.getUserRecords(URL).then((res)=>{
     setRecord(res.data)
   })

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL="http://localhost:8080/Admin/Pos"
+const URL="http://localhost:8081/Admin/Pos"
 
 class MedicalRecordServices{
     getRecords(){

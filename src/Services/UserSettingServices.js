@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const URL="http://localhost:8080/User/Settings/update"
+const URL="http://localhost:8081/User/Settings/update"
 
-const GET_MANAGEMENT_URL="http://localhost:8080/Admin/Settings"
-const URL2="http://localhost:8080/User/Home"
-const URL3="http://localhost:8080/User/home"
+const GET_MANAGEMENT_URL="http://localhost:8081/Admin/Settings"
+const URL2="http://localhost:8081/User/Home"
+const URL3="http://localhost:8081/User/home"
 class SettingsServices{
     updatePatient(details){
         return axios.put(URL,details);
@@ -19,10 +19,10 @@ class SettingsServices{
         return axios.post(URL3, data)
     }
     status(status,seat_no){
-        return axios.post(`http://localhost:8080/User/status/${status}/${seat_no}`)
+        return axios.post(`http://localhost:8081/User/status/${status}/${seat_no}`)
     }
     reset(){
-        return axios.delete("http://localhost:8080/User/delete")
+        return axios.delete("http://localhost:8081/User/delete")
     }
 
 

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const GET_LOGIN_ADMIN_URL="http://localhost:8080//Admin"
+const GET_LOGIN_ADMIN_URL="http://localhost:8081//Admin"
 
 
 class LoginServices{

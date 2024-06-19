@@ -1,7 +1,7 @@
 import axios from "axios";
  
-const TotalUser_URL="http://localhost:8080/Admin/Dashboard"
-const ALL_MEDICINE_URL="http://localhost:8080/Admin/Stock"
+const TotalUser_URL="http://localhost:8081/Admin/Dashboard"
+const ALL_MEDICINE_URL="http://localhost:8081/Admin/Stock"
 
 class DashboardServices{
     getTotalUser(){

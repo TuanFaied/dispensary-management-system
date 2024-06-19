@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const REGISTER_URL = "http://localhost:8080//Register"
+const REGISTER_URL = "http://localhost:8081//Register"
 
 class RegistationServices{
 

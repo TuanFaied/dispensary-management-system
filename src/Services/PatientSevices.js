@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const PATIENT_API_BASE_URL="http://localhost:8080/Admin/PatientDetails"
+const PATIENT_API_BASE_URL="http://localhost:8081/Admin/PatientDetails"
 
 class PatientServices{
     getPatients(){

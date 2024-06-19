@@ -23,7 +23,7 @@ function UserLogin() {
 
     const handlClick= (e)=>{
         e.preventDefault()
-        const GET_LOGIN_USER_URL=`http://localhost:8080//User/${user.p_email}`
+        const GET_LOGIN_USER_URL=`http://localhost:8081//User/${user.p_email}`
         
        LoginServices.getUser(GET_LOGIN_USER_URL).then((res)=>{
         console.log(res.data)

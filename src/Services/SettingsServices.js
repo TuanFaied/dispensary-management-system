@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const URL="http://localhost:8080/Admin/Settings/update"
+const URL="http://localhost:8081/Admin/Settings/update"
 
-const GET_MANAGEMENT_URL="http://localhost:8080/Admin/Settings"
+const GET_MANAGEMENT_URL="http://localhost:8081/Admin/Settings"
 
 class SettingsServices{
     updateManagement(details){
