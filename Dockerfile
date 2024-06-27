@@ -2,13 +2,13 @@ FROM node:20 AS build
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json yarn.lock ./
 
-RUN npm install 
+RUN yarn install 
 
 COPY . ./ 
 
-RUN npm run build
+RUN yarn build
 
 FROM nginx:1.25.1
 
