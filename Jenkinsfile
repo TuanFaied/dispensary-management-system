@@ -40,18 +40,18 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            // Clean up Docker environment after build
-            // sh 'docker-compose down'
-        }
-        success {
-            echo 'Build and deployment successful!'
-        }
-        failure {
-            echo 'Build or deployment failed.'
-        }
-    }
+    // post {
+    //     always {
+    //         // Clean up Docker environment after build
+    //         // sh 'docker-compose down'
+    //     }
+    //     success {
+    //         echo 'Build and deployment successful!'
+    //     }
+    //     failure {
+    //         echo 'Build or deployment failed.'
+    //     }
+    // }
 }
 
 
