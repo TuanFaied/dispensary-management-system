@@ -26,9 +26,9 @@ pipeline {
         stage('Build React App') {
             steps {
                 script {
-                    dir('frontend') {
-                        sh 'docker build -t react-app .'
-                    }
+                    
+                    sh 'docker build -t react-app .'
+                    
                 }
             }
         }
