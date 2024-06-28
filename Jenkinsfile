@@ -14,6 +14,7 @@ pipeline {
             steps {
                 script {
                     dir('baackend') {
+                        sh 'mvn clean package'
                         sh 'docker build -t spring-boot-app .'
                     }
                 }
