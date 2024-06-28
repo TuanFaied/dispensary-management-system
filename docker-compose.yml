@@ -23,7 +23,7 @@ services:
       MYSQL_PASSWORD: faied
       MYSQL_DATABASE: dispensary
     ports:
-      - "3307:3306"
+      - "3306:3306"
 
   react-app:
     image: react-app
