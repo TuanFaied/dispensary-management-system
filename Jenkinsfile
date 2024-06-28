@@ -1,10 +1,7 @@
 pipeline {
     agent any
 
-    environment {
-        // Define environment variables
-        DOCKER_COMPOSE_VERSION = '1.25.0'
-    }
+
 
     stages {
         stage('Clone Repository') {
