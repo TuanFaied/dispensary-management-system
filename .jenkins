@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/TuanFaied/3806--Ahamadh.git'
+                git branch: 'main', url: 'https://github.com/TuanFaied/dispensary-management-system.git'
             }
         }
         
