@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Define environment variables
-        DOCKER_COMPOSE_VERSION = '1.29.2'
+        DOCKER_COMPOSE_VERSION = '1.25.0'
     }
 
     stages {
