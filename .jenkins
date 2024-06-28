@@ -1,0 +1,59 @@
+pipeline {
+    agent any
+
+    environment {
+        // Define environment variables
+        DOCKER_COMPOSE_VERSION = '1.29.2'
+    }
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git branch: 'main', url: 'https://github.com/TuanFaied/3806--Ahamadh.git'
+            }
+        }
+        
+        stage('Build Spring Boot App') {
+            steps {
+                script {
+                    dir('baackend') {
+                        sh 'docker build -t spring-boot-app .'
+                    }
+                }
+            }
+        }
+        
+        stage('Build React App') {
+            steps {
+                script {
+                    dir('frontend') {
+                        sh 'docker build -t react-app .'
+                    }
+                }
+            }
+        }
+        
+        stage('Deploy with Docker Compose') {
+            steps {
+                script {
+                    sh 'docker-compose -f docker-compose.yml up -d'
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            // Clean up Docker environment after build
+            sh 'docker-compose down'
+        }
+        success {
+            echo 'Build and deployment successful!'
+        }
+        failure {
+            echo 'Build or deployment failed.'
+        }
+    }
+}
+
+
